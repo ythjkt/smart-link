@@ -1,0 +1,22 @@
+version: '2'
+services:
+  mongodb:
+    image: "mongo"
+    ports:
+     - "27017:27017"
+  server:
+    build: ./server/
+    ports:
+      - "6200:6200"
+    volumes:
+      - ./server:/usr/src/app
+    depends_on:
+      - mongodb
+  client:
+    build: ./client/
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./client:/usr/src/app
+    depends_on:
+      - server
