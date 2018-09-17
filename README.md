@@ -1,9 +1,10 @@
 # Get started
 1. Install the following
-..1. Docker
-..2. yarn or npm 
+··1. Docker
+··2. yarn or npm 
 
 2. Install dependencies of the project
+
 Using yarn
 ```bash
 cd client && yarn
