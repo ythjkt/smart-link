@@ -51,5 +51,14 @@ router.route('/').post((req, res) => {
     return res.json('Invalid Url');
   }
 });
+
+router.route('/:_id').delete((req, res) => {
+  const _id = req.params._id;
+  SmartLink.findByIdAndRemove({ _id },
+    (err, item) => {
+      if(err) res.json(err);
+      else res.json('Deleted');
+  });
+});
   
 module.exports = router;

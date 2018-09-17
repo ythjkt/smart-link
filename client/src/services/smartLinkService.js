@@ -8,6 +8,7 @@ export default class TodoService {
   all(callback) {
     axios.get(this.base_url)
     .then(res => {
+      console.log(res);
       callback(res.data);
     })
     .catch(err => {
@@ -17,7 +18,7 @@ export default class TodoService {
   }
 
   get(id, callback) {
-    axios.get(`${this.base_url}/${id}`)
+    axios.get(`${this.base_url}${id}`)
     .then((res) => {
       callback(res.data);
     })
@@ -50,8 +51,8 @@ export default class TodoService {
     });
   }
 
-  delete(id, callback) {
-    axios.delete(`${this.base_url}/${id}`)
+  delete(_id, callback) {
+    axios.delete(`${this.base_url}${_id}`)
     .then(res => {
       callback();
     })
