@@ -32,7 +32,6 @@ router.route('/').get((req, res) => {
 // Generate Url
 router.route('/').post((req, res) => {
   const { targetUrl } = req.body;
-  console.log(targetUrl);
   if (validUrl.isUri(targetUrl)) {
     const urlCode = shortid.generate();
     const smartLink = `${BASE_URL}/${urlCode}`;
@@ -43,11 +42,13 @@ router.route('/').post((req, res) => {
     });
     item.save()
     .then(item => {
-      res.json(item);
+      return res.json(item);
     })
     .catch(err => {
-      res.status(400).send('unable to save to database');
+      return res.status(400).send('unable to save to database');
     })
+  } else {
+    return res.json('Invalid Url');
   }
 });
   

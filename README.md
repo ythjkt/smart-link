@@ -1,5 +1,5 @@
 # Get started
-1. Install the following
+1. Have the following installed
 * Docker
 * yarn or npm 
 

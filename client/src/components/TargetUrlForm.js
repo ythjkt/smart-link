@@ -25,7 +25,11 @@ export default class TargetUrlForm extends Component {
     this.smartLinkService.post(
       this.state.targetUrl,
       (res) => {
-        this.props.onGenerate(res.data.smartLink);
+        if (!res) {
+          this.props.onGenerate(res.data.smartLink);
+        } else {
+          this.props.onInvalidUrl(res);
+        }
       }
     );
   }

@@ -11,16 +11,21 @@ class App extends Component {
     }
 
     this.onGenerate = this.onGenerate.bind(this);
+    this.onInvalidUrl = this.onInvalidUrl.bind(this);
   }
 
   onGenerate(smartUrl) {
     this.setState({smartUrl})
   }
 
+  onInvalidUrl(res) {
+    alert(res.data);
+  }
+
   render() {
     return (
       <div>
-        <TargetUrlForm onGenerate={this.onGenerate}/>
+        <TargetUrlForm onGenerate={this.onGenerate} onInvalidUrl={this.onInvalidUrl} />
         <SmartUrl smartUrl={this.state.smartUrl} />
       </div>
     )
