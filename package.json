@@ -1,5 +1,11 @@
 {
   "dependencies": {
     "create-react-app": "^1.5.2"
-  }
+  },
+  "name": "smart-link",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:bebaty01/smart-link.git",
+  "author": "bebaty01 <ythjkt@gmail.com>",
+  "license": "MIT"
 }

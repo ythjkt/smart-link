@@ -39,9 +39,8 @@ export default class TodoService {
     });
   }
 
-  update(data, id, callback) {
-    axios.put(`${this.base_url}/${id}`,
-    {desc: data})
+  update(id, targetUrl, callback) {
+    axios.put(`${this.base_url}/${id}`, { targetUrl })
     .then(res => {
       console.log('Updated');
       callback();

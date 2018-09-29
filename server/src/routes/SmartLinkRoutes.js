@@ -52,6 +52,19 @@ router.route('/').post((req, res) => {
   }
 });
 
+// Update url
+router.route('/:_id').put((req, res) => {
+  const { targetUrl } = req.body;
+  const _id = req.params._id;
+  if(validUrl.isUri(targetUrl)) {
+    SmartLink.findByIdAndUpdate({_id}, { targetUrl }, (err, item) => {
+      if(err) res.json(err);
+      else res.json('Updated');
+    });
+  }
+  res.json('Invalid Url');
+});
+
 router.route('/:_id').delete((req, res) => {
   const _id = req.params._id;
   SmartLink.findByIdAndRemove({ _id },
