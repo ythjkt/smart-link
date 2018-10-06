@@ -1,10 +1,10 @@
 const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
-const SmartLink = new Schema({
+const SmartLinkSchema = new Schema({
   targetUrl: String,
   smartLink: String,
-  urlCode: String,
+  hash: String,
   createdAt: {
     type: Date,
     default: Date.now
@@ -14,4 +14,4 @@ const SmartLink = new Schema({
     collection: 'SmartLinks'
 });
 
-module.exports = mongoose.model('SmartLink', SmartLink);
+module.exports = SmartLink = mongoose.model('SmartLink', SmartLinkSchema);

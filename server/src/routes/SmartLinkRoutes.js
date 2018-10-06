@@ -1,77 +1,31 @@
-const express = require('express');
-const validUrl = require("valid-url");
-const shortid = require("shortid");
-const SmartLink = require('../models/SmartLink');
+const { Router } = require('express')
+const smartLinkController = require('../controllers/smartLinkController')
 
-const app = express();
-const router = express.Router();
+const router = Router()
 
-const BASE_URL = 'localhost:6200'
+// @route  GET /:hash
+// @desc   Get item by id
+// @access Public
+router.get('/:hash', smartLinkController.redirectUrl)
 
-// Get item by id
-router.route('/:hash').get((req, res) => {
-  const urlCode = req.params.hash;
-  SmartLink.findOne({urlCode})
-    .then(item => {
-      if (item) {
-        return res.redirect(item.targetUrl);
-      } else {
-        return res.status(401).send('No such url');
-      }
-    });
-});
+// @route  GET /
+// @desc   Get all urls
+// @access Public
+router.get('/', smartLinkController.getUrls)
 
-// Get all urls
-router.route('/').get((req, res) => {
-  SmartLink.find()
-  .then(items => {
-    return res.json(items);
-  })
-});
+// @route  POST /
+// @desc   Generate url
+// @access Public
+router.post('/', smartLinkController.createUrl)
 
-// Generate Url
-router.route('/').post((req, res) => {
-  const { targetUrl } = req.body;
-  if (validUrl.isUri(targetUrl)) {
-    const urlCode = shortid.generate();
-    const smartLink = `${BASE_URL}/${urlCode}`;
-    const item = new SmartLink({
-      targetUrl,
-      smartLink,
-      urlCode,
-    });
-    item.save()
-    .then(item => {
-      return res.json(item);
-    })
-    .catch(err => {
-      return res.status(400).send('unable to save to database');
-    })
-  } else {
-    return res.json('Invalid Url');
-  }
-});
+// @route  PUT /
+// @desc   Update url
+// @access Public
+router.put('/:id', smartLinkController.updateUrl)
 
-// Update url
-router.route('/:_id').put((req, res) => {
-  const { targetUrl } = req.body;
-  const _id = req.params._id;
-  if(validUrl.isUri(targetUrl)) {
-    SmartLink.findByIdAndUpdate({_id}, { targetUrl }, (err, item) => {
-      if(err) res.json(err);
-      else res.json('Updated');
-    });
-  }
-  res.json('Invalid Url');
-});
+// @route  DELETE /
+// @desc   Delete url
+// @access Public
+router.delete('/:id', smartLinkController.deleteUrl)
 
-router.route('/:_id').delete((req, res) => {
-  const _id = req.params._id;
-  SmartLink.findByIdAndRemove({ _id },
-    (err, item) => {
-      if(err) res.json(err);
-      else res.json('Deleted');
-  });
-});
-  
 module.exports = router;

@@ -45,7 +45,7 @@ class App extends Component {
   }
 
   onInvalidUrl(res) {
-    alert(res.data);
+    alert(res);
   }
 
   render() {
