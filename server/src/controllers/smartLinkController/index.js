@@ -1,7 +1,7 @@
 const validUrl = require("valid-url")
 const shortid = require("shortid")
-const SmartLink = require('../models/SmartLink')
-const { base_url } = require('../../config')
+const SmartLink = require('../../models/SmartLink')
+const { base_url } = require('../../../config')
 
 // @desc Redirects short_url to long_url
 function redirectUrl(req, res) {
