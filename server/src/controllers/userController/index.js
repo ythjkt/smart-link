@@ -4,10 +4,9 @@ const jwt = require('jsonwebtoken')
 const { secretOrKey } = require('../../../config')
 
 const validateRegisterInput = require('./validateRegisterInput')
+const validateLoginInput = require('./validateLoginInput')
 
-// @route   POST /users/register 
 // @desc    Register user
-// @access  Public
 function registerUser(req, res) {
   const { errors, isValid } = validateRegisterInput(req.body)
 
@@ -41,11 +40,15 @@ function registerUser(req, res) {
     })
 }
 
-// @route   GET /users/login
 // @desc    Returns JWT
-// @access  Public
 function loginUser(req, res) {
-  const errors = {}
+  const { errors, isValid } = validateLoginInput(req.body)
+
+  // Check if validation has passed
+  if (!isValid) {
+    return res.status(400).json(errors)
+  }
+  
   const { email, password } = req.body
 
   User.findOne({ email })
@@ -73,16 +76,14 @@ function loginUser(req, res) {
               }
             )
           } else {
-            errors.password = 'Invalid password'
+            errors.password = 'Incorrect password'
             return res.status(400).json(errors)
           }
         })
     })
 }
 
-// @route   GET /users/current
 // @desc    Returns current user
-// @access  Private
 function getCurrentUser(req, res) {
   res.json({
     id: req.user.id,
