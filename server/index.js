@@ -2,8 +2,11 @@ const express = require('express')
 const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
 const cors = require('cors')
+const passport = require('passport')
+
 const smartLinkRoutes = require('./src/routes/SmartLinkRoutes')
 const userRoutes = require('./src/routes/UserRoutes')
+
 
 // App instance
 const app = express()
@@ -35,6 +38,10 @@ mongoose.connect(MONGO_URL, CONNECTION_OPTION)
 app.use(cors())
 app.use(bodyParser.urlencoded({extended: true}))
 app.use(bodyParser.json())
+
+// Passport middleware
+app.use(passport.initialize())
+require('./config/passport')(passport)
 
 
 // Registering routes
