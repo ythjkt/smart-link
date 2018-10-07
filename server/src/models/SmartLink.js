@@ -1,5 +1,5 @@
-const mongoose = require('mongoose');
-const { Schema } = mongoose;
+const mongoose = require('mongoose')
+const { Schema } = mongoose
 
 const SmartLinkSchema = new Schema({
   targetUrl: String,
@@ -11,7 +11,7 @@ const SmartLinkSchema = new Schema({
   }
 },
 {
-    collection: 'SmartLinks'
-});
+    collection: 'smartlinks'
+})
 
-module.exports = SmartLink = mongoose.model('SmartLink', SmartLinkSchema);
+module.exports = SmartLink = mongoose.model('smartlinks', SmartLinkSchema)

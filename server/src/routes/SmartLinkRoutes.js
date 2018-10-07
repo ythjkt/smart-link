@@ -28,4 +28,4 @@ router.put('/:id', smartLinkController.updateUrl)
 // @access Public
 router.delete('/:id', smartLinkController.deleteUrl)
 
-module.exports = router;
+module.exports = router
