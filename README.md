@@ -2,6 +2,7 @@
 1. Have the following installed
 * Docker
 * yarn or npm 
+* Express
 
 2. Install dependencies of the project
 
