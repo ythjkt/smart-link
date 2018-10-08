@@ -1,6 +1,7 @@
 const Validator = require('validator')
 const isEmpty = require('../../utils/isEmpty')
 
+// @params req.body
 module.exports = function validateLoginInput(data) {
   const errors = {}
   const {
