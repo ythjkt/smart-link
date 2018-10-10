@@ -5,23 +5,21 @@
 
 2. Install dependencies of the project
 
+Using npm
+```bash
+# From root directory
+# This will install npm packages in server and client directory
+npm install
+```
+
 Using yarn
 ```bash
 cd client && yarn
 cd ../server && yarn
 ```
 
-Using npm
-```bash
-cd client && npm install
-cd ../server && npm install
-```
-
 3. Build docker images and run
 ```bash
-# Back to root of the project
-cd ..
-
 # Build docker images
 docker-compose build
 
