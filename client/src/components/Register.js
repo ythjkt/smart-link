@@ -21,6 +21,12 @@ class Register extends Component {
     this.onChange = this.onChange.bind(this)
   }
 
+  componentDidMount() {
+    if (this.props.auth.isAuthenticated) {
+      this.props.history.push('/dashboard')
+    }
+  }
+
   componentWillReceiveProps(newProps) {
     if (newProps) {
       this.setState({
@@ -38,7 +44,7 @@ class Register extends Component {
       password2: this.state.password2
     }
 
-    this.props.registerUser(newUser)
+    this.props.registerUser(newUser, this.props.history)
   }
 
   onChange(e) {
@@ -60,6 +66,7 @@ class Register extends Component {
           />
           <TextFormInput
             placeholder="Password"
+            type="password"
             name="password"
             value={this.state.password}
             error={errors.password}
@@ -67,6 +74,7 @@ class Register extends Component {
           />
           <TextFormInput
             placeholder="Confirm Password"
+            type="password"
             name="password2"
             value={this.state.password2}
             error={errors.password2}
