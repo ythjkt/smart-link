@@ -1,0 +1,205 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box;
+  font-size: 1.6rem; }
+
+main {
+  overflow: hidden; }
+
+body {
+  font-family: "Poppins", sans-serif; }
+
+.heading-secondary {
+  font-size: 2.4rem;
+  margin-bottom: 2.4rem; }
+
+.container {
+  max-width: 100rem;
+  margin: 0 auto; }
+
+.text-right {
+  text-align: right; }
+
+.u-margin-top-large {
+  margin-top: 4rem !important; }
+
+.u-margin-top-medium {
+  margin-top: 3.2rem !important; }
+
+.u-margin-bottom-large {
+  margin-bottom: 4rem !important; }
+
+.landing-global-nav {
+  background-color: #fff;
+  font-size: 1.6rem;
+  position: fixed;
+  width: 100%;
+  z-index: 100; }
+  .landing-global-nav__container {
+    display: flex;
+    align-items: center;
+    max-width: 100rem;
+    margin: 0 auto;
+    padding: .75rem 0; }
+  .landing-global-nav__list {
+    display: flex;
+    list-style: none; }
+  .landing-global-nav__item {
+    margin: 0 1.5rem; }
+  .landing-global-nav__logo {
+    height: 2.4rem;
+    margin-right: auto; }
+  .landing-global-nav__link:link, .landing-global-nav__link:visited {
+    color: #000;
+    text-decoration: none; }
+  .landing-global-nav__link:hover {
+    color: #e21838; }
+  .landing-global-nav__cta {
+    margin-left: 1.5rem; }
+
+.footer {
+  display: flex;
+  padding: 10rem 0; }
+  .footer__container {
+    display: flex; }
+    .footer__container > * {
+      margin-right: 4rem; }
+  .footer__nav {
+    display: flex; }
+  .footer__list {
+    list-style: none; }
+
+.row {
+  display: flex; }
+
+.col:not(:last-child) {
+  margin-right: 4rem; }
+
+.login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 35rem;
+  margin: 0 auto; }
+  .login__logo {
+    height: 2.4rem; }
+
+.button, .button:link, .button:visited {
+  font-size: 1.6rem;
+  text-decoration: none;
+  padding: .75rem 1.125rem;
+  display: inline-block;
+  align-items: center;
+  border-radius: 4px;
+  transition: all .1s;
+  border: 1px solid #e21838;
+  cursor: pointer;
+  color: #fff;
+  background-color: #e21838; }
+
+.button--full {
+  width: 100%; }
+
+.button:hover {
+  color: #e21838;
+  background-color: #fff; }
+
+.button:active {
+  opacity: .8;
+  outline: none; }
+
+.form-group {
+  width: 100%;
+  margin-bottom: 2.4rem; }
+  .form-group label {
+    font-size: 1.6rem; }
+  .form-group__input {
+    width: 100%;
+    height: 4rem;
+    display: block;
+    padding: .8rem 1.6rem;
+    font-size: inherit;
+    border: 1px solid #dcdbdb;
+    border-radius: 2px; }
+    .form-group__input:focus {
+      outline: none;
+      border: 1px solid #0C56BC; }
+  .form-group__error {
+    color: #e21838;
+    font-size: 1.2rem; }
+
+.hero {
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative; }
+  .hero__text-container {
+    flex: 0 1 40%; }
+  .hero__header {
+    font-family: "Poppins", sans-serif;
+    font-size: 4rem;
+    font-weight: 900;
+    border-bottom: 0.5rem solid #e21838;
+    margin-bottom: 2.4rem;
+    display: inline-block; }
+  .hero__sub-header {
+    font-size: 2.4rem;
+    line-height: 4rem;
+    font-weight: 300;
+    margin-bottom: 2.4rem; }
+  .hero__img {
+    width: 40rem;
+    display: block;
+    border: 1rem solid #dcdbdb;
+    border-radius: 1rem;
+    box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.1);
+    transform: translateY(2rem); }
+  .hero::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to right bottom, #e21838, rgba(226, 24, 56, 0.9));
+    position: absolute;
+    transform: rotate(-30deg) translate(55%, 25%);
+    z-index: -1;
+    border-radius: 1rem; }
+
+.features {
+  padding: 10rem 0;
+  background-color: #fff; }
+
+.use-case {
+  padding: 10rem 0;
+  background-color: #fcfcfc;
+  align-items: center;
+  justify-content: center; }
+  .use-case__monitor {
+    flex-basis: 40%;
+    padding: 4rem;
+    background-image: linear-gradient(to right bottom, rgba(226, 24, 56, 0.7), rgba(226, 24, 56, 0.9));
+    border: 1rem solid #fff;
+    border-radius: 1rem;
+    box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.1); }
+  .use-case__img {
+    width: 100%;
+    border-radius: 2px;
+    display: block; }
+  .use-case__text {
+    flex: 0 1 40%;
+    margin-right: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }

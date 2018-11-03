@@ -1,0 +1,13 @@
+.login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 35rem;
+  margin: 0 auto;
+
+  &__logo {
+    height: 2.4rem;
+  }
+}

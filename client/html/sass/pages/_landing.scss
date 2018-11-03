@@ -1,0 +1,88 @@
+.hero {
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+
+  &__text-container {
+    flex: 0 1 40%;
+  }
+
+  &__header-icon {
+
+  }
+
+  &__header {
+    font-family: $font-primary;
+    font-size: 4rem;
+    font-weight: 900;
+    border-bottom: .5rem solid $color-primary;
+    margin-bottom: 2.4rem;
+    display: inline-block;
+  }
+
+  &__sub-header {
+    font-size: 2.4rem;
+    line-height: 4rem;
+    font-weight: 300;
+    margin-bottom: 2.4rem;
+  }
+
+  &__img {
+    width: 40rem;
+    display: block;
+    border: 1rem solid $color-grey-light-2;
+    border-radius: 1rem;
+    box-shadow: 0 1rem 4rem rgba($color-black, .1);
+    transform: translateY(2rem);
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to right bottom, $color-primary, rgba($color-primary, .9));
+    position: absolute;
+    transform: rotate(-30deg) translate(55%, 25%);
+    z-index: -1;
+    border-radius: 1rem;
+  }
+}
+
+.features {
+  padding: 10rem 0;
+  background-color: $color-white;
+}
+
+.use-case {
+  padding: 10rem 0;
+  background-color: $color-grey-light-1;
+  align-items: center;
+  justify-content: center;
+
+
+  &__monitor {
+    flex-basis: 40%;
+    padding: 4rem;
+    background-image: linear-gradient(to right bottom, rgba($color-primary, .7), rgba($color-primary, .9));
+    border: 1rem solid $color-white;
+    border-radius: 1rem;
+    box-shadow: 0 1rem 4rem rgba($color-black, .1);
+  }
+
+  &__img {
+    width: 100%;
+    border-radius: 2px;
+    display: block;
+  }
+
+  &__text {
+    flex: 0 1 40%;
+    margin-right: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}

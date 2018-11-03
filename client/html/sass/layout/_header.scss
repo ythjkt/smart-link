@@ -1,0 +1,45 @@
+.landing-global-nav {
+  background-color: $color-white;
+  font-size: 1.6rem;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    max-width: 100rem;
+    margin: 0 auto;
+    padding: .75rem 0;
+  }
+
+  &__list {
+    display: flex;
+    list-style: none;
+  }
+
+  &__item {
+    margin: 0 1.5rem;
+  }
+
+  &__logo {
+    height: 2.4rem;
+    margin-right: auto;
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      color: $color-black;
+      text-decoration: none;
+    }
+
+    &:hover {
+      color: $color-primary;
+    }
+  }
+
+  &__cta {
+    margin-left: 1.5rem;
+  }
+}

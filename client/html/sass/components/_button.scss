@@ -1,0 +1,33 @@
+.button {
+  &,
+  &:link,
+  &:visited {
+      font-size: 1.6rem;
+      text-decoration: none;
+      padding: .75rem 1.125rem;
+      display: inline-block;
+      align-items: center;
+      border-radius: 4px;
+      transition: all .1s;
+      border: 1px solid $color-primary;
+
+      // for button element
+      cursor: pointer;
+      color: $color-white;
+      background-color: $color-primary;
+  }
+
+  &--full {
+    width: 100%;
+  }
+  
+  &:hover {
+    color: $color-primary;
+    background-color: $color-white;
+  }
+
+  &:active {
+    opacity: .8;
+    outline: none;
+  }
+}

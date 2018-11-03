@@ -1,0 +1,9 @@
+.row {
+  display: flex;
+}
+
+.col {
+  &:not(:last-child) {
+    margin-right: $gutter-horizontal;
+  }
+}

@@ -1,0 +1,24 @@
+.footer {
+  display: flex;
+  padding: 10rem 0;
+
+  &__container {
+    display: flex;
+
+    & > * {
+      margin-right: 4rem;
+    }
+  }
+
+  &__nav {
+    display: flex;
+  }
+
+  &__col {
+
+  }
+
+  &__list {
+    list-style: none;
+  }
+}
