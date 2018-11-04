@@ -1,0 +1,15 @@
+.toolbar {
+  &__container {
+    display: flex;
+    align-items: center;
+  }
+
+  &__counter-box {
+    margin-right: 3.2rem;
+  }
+
+  &__search-box {
+    margin-right: auto;
+    flex: 0 1 20rem;
+  }
+}

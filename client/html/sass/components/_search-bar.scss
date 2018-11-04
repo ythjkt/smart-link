@@ -1,0 +1,33 @@
+.search-bar {
+  position: relative;
+
+  &__input {
+    height: 4rem;
+    width: 100%;
+    display: block;
+    border-radius: 2px;
+    border: 1px solid $color-grey-light-3;
+    padding: .8rem 1.6rem;
+    padding-left: 3.2rem;
+    font-size: inherit;
+
+    &:focus {
+      outline: none;
+      border: 1px solid $color-blue;
+    }
+  }
+
+  &__icon {
+    width: 1.6rem;
+    height: 1.6rem;
+    position: absolute;
+    top: 1.2rem;
+    left: .8rem;
+    z-index: 5;
+    fill: $color-grey-light-3;
+  }
+
+  &__input:focus ~ &__icon {
+    fill: $color-blue;
+  }
+}

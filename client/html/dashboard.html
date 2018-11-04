@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!--favicon-->
+  <link rel="icon" type="image/png" href="img/favicon/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="img/favicon/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="img/favicon/favicon-64x64.png" sizes="64x64">
+  <link rel="icon" type="image/png" href="img/favicon/favicon-128x128.png" sizes="128x128">
+
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,700" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <title>smartlink</title>
+</head>
+<body>
+  <header class="app-header">
+    <div class="app-header__container container">
+      <a href="/" class="app-header__logo">
+        <img src="img/logo.svg" alt="" class="app-header__logo">
+      </a>
+      <!-- <nav class="app-header__nav">
+        <ul class="app-header__list">
+          <li class="app-header__item"></li>
+        </ul>
+      </nav> -->
+      <div class="dropdown">
+        <div class="dropdown__trigger">
+          <div class="avatar">
+            <img src="img/avatar.png" alt="" class="avatar__img">
+          </div>
+        </div>
+        <div class="dropdown__content">
+          <div class="accountPanel">
+            <div class="accountPanel__header">
+              <p class="text-s">bebaty01</p>
+              <p class="text-xs">bebaty01@gmail.com</p>
+            </div>
+            <ul class="accountPanel__list">
+              <li><a href="#">Account setting</a></li>
+              <li><a href="#">Sign out</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main class="main">
+    <section class="toolbar u-margin-top-medium">
+      <div class="container toolbar__container">
+        <div class="toolbar__counter-box">
+          <span class="toolbar__counter">24 Links</span>
+        </div>
+        <div class="toolbar__search-box">
+          <div class="search-bar">
+              <input type="text" class="search-bar__input">
+              <svg class="search-bar__icon">
+                <use xlink:href="img/sprite.svg#icon-magnifying-glass" />
+              </svg>
+          </div>
+        </div>
+        <div class="toolbar__button-box">
+          <button class="button">New link</button>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

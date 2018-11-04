@@ -1,0 +1,21 @@
+.accountPanel {
+  border: 1px solid $color-grey-light-2;
+  border-radius: 2px;
+  overflow: hidden;
+  font-size: 1.2rem;
+
+  &__header {
+    padding: 2.4rem;
+    background-color: $color-grey-light-2;
+  }
+
+  &__list {
+    padding: 2.4rem;
+    background-color: $color-white;
+    list-style: none;
+
+    & > *:not(:last-child) {
+      margin-bottom: 1.6rem;
+    }
+  }
+}
