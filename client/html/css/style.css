@@ -47,7 +47,7 @@ body {
   position: fixed;
   width: 100%;
   z-index: 100;
-  border-bottom: 1px solid #dcdbdb; }
+  border-bottom: 1px solid #f4f4f4; }
   .app-header__container {
     display: flex;
     align-items: center;
@@ -83,6 +83,8 @@ body {
   height: 100vh;
   width: 32rem;
   margin: 0 auto; }
+  .login form {
+    width: 100%; }
   .login__logo {
     height: 2.4rem; }
 
@@ -138,8 +140,7 @@ body {
     font-size: inherit;
     border: 1px solid #f4f4f4;
     border-radius: 2px; }
-    s
-.form-group__input:focus {
+    .form-group__input:focus {
       outline: none;
       border: 1px solid #0C56BC; }
   .form-group__error {
@@ -203,6 +204,28 @@ body {
     fill: #dcdbdb; }
   .search-bar__input:focus ~ .search-bar__icon {
     fill: #0C56BC; }
+
+.link-table__header {
+  font-weight: 600;
+  padding: 1.2rem;
+  border-bottom: 1px solid #f4f4f4; }
+
+.link-table__list {
+  list-style: none; }
+
+.link-table__item {
+  font-size: 1.2rem;
+  padding: 1.2rem;
+  font-weight: 300;
+  display: flex;
+  align-items: center; }
+  .link-table__item:nth-child(even) {
+    background-color: #f4f4f4; }
+  .link-table__item > *:not(:last-child) {
+    margin-right: 4rem; }
+
+.link-table__slink {
+  flex: 0 1 10%; }
 
 .landing-global-nav {
   background-color: #fff;
