@@ -164,6 +164,8 @@ body {
     position: absolute;
     right: 0;
     top: 3.2rem; }
+    .dropdown__content--hide {
+      display: none; }
 
 .accountPanel {
   border: 1px solid #f4f4f4;
@@ -208,7 +210,8 @@ body {
 .link-table__header {
   font-weight: 600;
   padding: 1.2rem;
-  border-bottom: 1px solid #f4f4f4; }
+  border-bottom: 1px solid #f4f4f4;
+  display: flex; }
 
 .link-table__list {
   list-style: none; }
@@ -221,11 +224,34 @@ body {
   align-items: center; }
   .link-table__item:nth-child(even) {
     background-color: #f4f4f4; }
-  .link-table__item > *:not(:last-child) {
-    margin-right: 4rem; }
 
-.link-table__slink {
+.link-table__slink, .link-table__h-slink {
+  flex: 0 1 20%; }
+
+.link-table__tlink, .link-table__h-tlink {
+  flex: 1 1 auto; }
+
+.link-table__clicks, .link-table__h-clicks {
   flex: 0 1 10%; }
+
+.link-table__date, .link-table__h-date {
+  flex: 0 1 10%;
+  align-items: end; }
+
+.modal {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.1);
+  top: 0;
+  left: 0;
+  z-index: 1000; }
+  .modal__content {
+    background-color: #fff;
+    width: 72.8rem;
+    padding: 6.4rem;
+    border-radius: 2px;
+    margin: 9.6rem auto 0; }
 
 .landing-global-nav {
   background-color: #fff;

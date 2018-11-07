@@ -1,0 +1,17 @@
+.modal {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba($color-black, .1);
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  
+  &__content {
+    background-color: $color-white;
+    width: 72.8rem;
+    padding: 6.4rem;
+    border-radius: 2px;
+    margin: 9.6rem auto 0;
+  }
+}

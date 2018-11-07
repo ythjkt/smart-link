@@ -3,6 +3,7 @@
     font-weight: 600;
     padding: 1.2rem;
     border-bottom: 1px solid $color-grey-light-2;
+    display: flex;
   }
 
   &__list {
@@ -19,24 +20,26 @@
     &:nth-child(even) {
       background-color: $color-grey-light-2;
     }
-
-    & > *:not(:last-child) {
-      margin-right: 4rem;
-    }
   }
 
-  &__slink {
+  &__slink,
+  &__h-slink {
+    flex: 0 1 20%;
+  }
+
+  &__tlink,
+  &__h-tlink {
+    flex: 1 1 auto;
+  }
+
+  &__clicks,
+  &__h-clicks {
     flex: 0 1 10%;
   }
 
-  &__tlink {
-  }
-
-  &__clicks {
-
-  }
-
-  &__date {
+  &__date,
+  &__h-date {
+    flex: 0 1 10%;
     align-items: end;
   }
 }
