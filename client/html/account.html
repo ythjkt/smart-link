@@ -51,6 +51,28 @@
     </div>
   </header>
   <main class="main">
+    <div class="sidenavLayout container">
+      <div class="sidenavLayout__sidenav">
+        <div class="sidenav">
+          <ul class="sidenav__list">
+            <li class="sidenav__item"><a href="#" class="sidenav__link">Profile</a></li>
+            <li class="sidenav__item"><a href="#" class="sidenav__link">Sign Out</a></li>
+          </ul>
+        </div>
+       
+      </div>
+      <div class="sidenavLayout__main">
+        <div class="box">
+          <div class="box__headerContainer">
+            <h3 class="box__header"></h3>
+          </div>
+          <div class="box__mainContainer"></div>
+        </div>
+      </div>
+    </div>
+    <div class="dbSidenav">
+        
+    </div>
     <section class="toolbar u-margin-top-medium">
       <div class="container toolbar__container">
         <div class="toolbar__counter-box">
@@ -95,23 +117,5 @@
     </section>
   </main>
 
-  <div class="modal">
-    <div class="modal__content">
-      <button class="modal__close">
-        <svg id="icon-close" class="modal__closeIcon">
-          <use xlink:href="img/sprite.svg#icon-cross" />
-        </svg>
-      </button>
-      <form action="dashboard.html" class="newLinkForm">
-        <div class="form-group">
-          <labal>Target</labal>
-          <input type="text" class="form-group__input">
-          <!-- <small class="form-group__error">Invalid email</small> -->
-        </div>
-        <div class="text-m u-margin-top-medium">localhost/jfrfg88</div>
-        <button class="button u-margin-top-medium">Create</button>
-      </form>
-    </div>
-  </div>
 </body>
 </html>
