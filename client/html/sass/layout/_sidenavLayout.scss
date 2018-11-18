@@ -2,10 +2,10 @@
   display: flex;
 
   &__sidenav {
-
+    flex: 0 1 200px;
   }
 
   &__main {
-
+    flex: 1 1 auto;
   }
 }

@@ -115,6 +115,10 @@ body {
 
 .sidenavLayout {
   display: flex; }
+  .sidenavLayout__sidenav {
+    flex: 0 1 200px; }
+  .sidenavLayout__main {
+    flex: 1 1 auto; }
 
 .button, .button:link, .button:visited {
   font-size: 1.6rem;
@@ -280,6 +284,17 @@ body {
     height: 1.6rem;
     fill: #e21838;
     display: block; }
+
+.box {
+  border: 1px solid #f4f4f4;
+  border-radius: 2px; }
+  .box__headerContainer {
+    border-bottom: 1px solid #f4f4f4;
+    padding: 1.6rem 2.4rem; }
+  .box__header {
+    font-size: 1.6rem; }
+  .box__mainContainer {
+    padding: 2.4rem; }
 
 .landing-global-nav {
   background-color: #fff;

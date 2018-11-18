@@ -51,7 +51,7 @@
     </div>
   </header>
   <main class="main">
-    <div class="sidenavLayout container">
+    <div class="sidenavLayout container u-margin-top-medium">
       <div class="sidenavLayout__sidenav">
         <div class="sidenav">
           <ul class="sidenav__list">
@@ -64,57 +64,30 @@
       <div class="sidenavLayout__main">
         <div class="box">
           <div class="box__headerContainer">
-            <h3 class="box__header"></h3>
+            <h3 class="box__header">Profile</h3>
           </div>
-          <div class="box__mainContainer"></div>
+          <div class="box__mainContainer">
+            <form action="dashboard.html">
+              <div class="form-group">
+              <labal>Account name</labal>
+              <input type="text" class="form-group__input">
+              <!-- <small class="form-group__error">Invalid email</small> -->
+            </div>
+              <div class="form-group">
+                  <labal>Email</labal>
+                  <input type="email" class="form-group__input">
+                  <!-- <small class="form-group__error">Invalid email</small> -->
+                </div>
+                <div class="form-group">
+                  <labal>Password</labal>
+                  <input type="password" class="form-group__input">
+                </div>
+                <button class="button">Save</button>
+            </form>
+          </div>
         </div>
       </div>
     </div>
-    <div class="dbSidenav">
-        
-    </div>
-    <section class="toolbar u-margin-top-medium">
-      <div class="container toolbar__container">
-        <div class="toolbar__counter-box">
-          <span class="toolbar__counter">24 Links</span>
-        </div>
-        <div class="toolbar__search-box">
-          <div class="search-bar">
-              <input type="text" class="search-bar__input">
-              <svg class="search-bar__icon">
-                <use xlink:href="img/sprite.svg#icon-magnifying-glass" />
-              </svg>
-          </div>
-        </div>
-        <div class="toolbar__button-box">
-          <button class="button">New link</button>
-        </div>
-      </div>
-    </section>
-    <section class="link-table u-margin-top-medium">
-      <div class="container link-table__container">
-        <div class="link-table__header">
-          <span class="link-table__h-slink">smartlink</span>
-          <span class="link-table__h-tlink">Target Link</span>
-          <span class="link-table__h-clicks">Clicks</span>
-          <span class="link-table__h-date">Created at</span>
-        </div>
-        <ul class="link-table__list">
-          <li class="link-table__item">
-            <span class="link-table__slink">localhost/fsa9223a</span>
-            <span class="link-table__tlink">https://www.udemy.com/advanced-css-and-sass/learn/v4/t/lecture/8274592?start=0</span>
-            <span class="link-table__clicks">1</span>
-            <span class="link-table__date">01/12/2019 12:00</span>
-          </li>
-          <li class="link-table__item">
-            <span class="link-table__slink">localhost/fsa9223a</span>
-            <span class="link-table__tlink">https://www.udemy.com/advanced-css-and-sass/learn/v4/t/lecture/8274592?start=0</span>
-            <span class="link-table__clicks">1</span>
-            <span class="link-table__date">01/12/2019 12:00</span>
-          </li>
-        </ul>
-      </div>
-    </section>
   </main>
 
 </body>

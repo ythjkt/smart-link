@@ -1,0 +1,14 @@
+// MEDIA QUERY
+/*
+0 - 600px
+600 - 900px
+900 - 1200px
+1200 - 1500px
+[1200 - 1800px]
+1800px + 
+*/
+@mixin breakpoint($point) {
+  @if $point == phone {
+    @media only screen and (max-width: 600px) { @content };
+  }
+}

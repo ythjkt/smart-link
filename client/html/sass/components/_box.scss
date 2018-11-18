@@ -1,0 +1,17 @@
+.box {
+  border: 1px solid $color-grey-light-2;
+  border-radius: 2px;
+
+  &__headerContainer {
+    border-bottom: 1px solid $color-grey-light-2;
+    padding: 1.6rem 2.4rem;
+  }
+
+  &__header {
+    font-size: 1.6rem;
+  }
+
+  &__mainContainer {
+    padding: 2.4rem;
+  }
+}
